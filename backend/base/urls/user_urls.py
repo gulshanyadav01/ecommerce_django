@@ -11,5 +11,7 @@ urlpatterns = [
 
     path('profile/', views.getUserProfile),
 
+    path('profile/update/', views.updateUserProfile),
+
     path("", views.getUsers),
 ]
