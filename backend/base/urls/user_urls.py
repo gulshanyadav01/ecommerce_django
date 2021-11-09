@@ -13,5 +13,5 @@ urlpatterns = [
 
     path('profile/update/', views.updateUserProfile),
 
-    path("", views.getUsers),
+    path("", views.getUsers, name = "users"),
 ]

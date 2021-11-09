@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'base.apps.BaseConfig',
 ]
+
 REST_FRAMEWORK = {
     
     'DEFAULT_AUTHENTICATION_CLASSES': (
