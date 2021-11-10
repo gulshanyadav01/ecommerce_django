@@ -10,14 +10,14 @@ from django.contrib.auth.hashers import make_password
 from rest_framework import status
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
-from decouple import config
+
 
 
 @api_view(['GET'])
 def getProducts(request):
     products = Product.objects.all()
     serializer = ProductSerializer(products, many= True)
-    return Response(serializer.data) 
+    return Response(serializer.data)
 
 @api_view(["GET"])
 def getProduct(request, pk):
