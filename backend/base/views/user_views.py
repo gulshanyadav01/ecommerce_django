@@ -15,6 +15,7 @@ from django.contrib.auth.models import User
 from rest_framework import status
 
 
+
 # Create your views here.
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
