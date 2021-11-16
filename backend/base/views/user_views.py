@@ -43,7 +43,6 @@ def registerUser(request):
             email = data['email'],
             password = make_password(data['password'])
         )
-
         serializer = UserSerializerWithToken(user, many=False)
         return Response(serializer.data)
     except:
