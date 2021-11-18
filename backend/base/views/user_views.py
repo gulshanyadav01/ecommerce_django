@@ -50,12 +50,13 @@ def registerUser(request):
         return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET'])
-@permission_classes([IsAuthenticated])
+@api_view(["GET", "POST"])
+# @permission_classes([IsAuthenticated])
 def getUserProfile(request):
-    user = request.user
-    serializer = UserSerializer(user, many= False)
-    return Response(serializer.data) 
+    # user = request.user
+    # serializer = UserSerializer(user, many= False)
+    message = {"data":request.data}
+    return Response(message) 
 
 
 
